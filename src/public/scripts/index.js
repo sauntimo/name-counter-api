@@ -7,7 +7,6 @@ const attatchEventListener = () => {
   })
 }
 
-
 const getCount = async (name) => {
   const response = await fetch(`/name-counter/${name}`);
   const data = await response.json();
