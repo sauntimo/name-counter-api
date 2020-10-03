@@ -12,9 +12,6 @@ const nameCounter = new NameCounter();
  * "GET /api/name-count/:name"
  */
 router.get('/:name', async (req: Request, res: Response) => {
-
-    console.log(`caught an api hit`);
-
     const nameCount = await nameCounter.countName(req.params.name);
     return res.status(OK).json(nameCount);
 });
