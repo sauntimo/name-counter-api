@@ -9,11 +9,15 @@ Implementing similar functionality to the command line version [github.com/saunt
 
 - clone the repo
 
+```
 $ git clone git@github.com:sauntimo/name-counter-api.git name-counter-api
+```
 
 - initialise
 
+```
 $ cd name-counter-api && npm i && npm run start:dev
+```
 
 ![image](https://user-images.githubusercontent.com/2720466/94990865-fd5de100-0576-11eb-9f8a-de06e98a2b74.png)
 
