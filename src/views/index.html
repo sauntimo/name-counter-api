@@ -11,7 +11,7 @@
 
 <body>
   <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron mb-4">
       <h1>Name Counter API</h1>
       <pre><code>GET /name-counter/:name</code></pre>
       <p>Returns count of how many times that name appears in the text of Oliver Twist.</p>
@@ -20,18 +20,18 @@
     </div>
 
     <form>
-      <div class="form-row align-items-center">
-        <div class="col-10">
+      <div class="form-row mb-4">
+        <div class="col-md-8">
           <input
             type="text"
-            class="form-control mb-2"
+            class="form-control"
             id="inlineFormInput"
             placeholder="Oliver"
             value="Oliver"
           >
         </div>
-        <div class="col">
-          <button id="makeRequest" class="btn btn-primary mb-2">Count</button>
+        <div class="col-md-4">
+          <button id="makeRequest" class="btn btn-primary btn-block">Count</button>
         </div>
       </div>
     </form>
