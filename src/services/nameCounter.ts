@@ -6,7 +6,7 @@ import { INameCounter } from '../entities/NameCounter';
 
 export default class NameCounter {
 
-  private readonly textFilePath = path.join(__dirname, '../inputs/oliver-twist.txt');
+  private readonly textFilePath = './inputs/oliver-twist.txt';
 
   public countName = async (name: string): Promise<INameCounter> => {
 
