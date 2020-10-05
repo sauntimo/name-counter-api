@@ -8,6 +8,12 @@
     "start:dev": "nodemon",
     "test": "nodemon --config ./spec/nodemon.json"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sauntimo/name-counter-api.git"
+  },
+  "author": "Tim Saunders",
+  "license": "MIT",
   "nodemonConfig": {
     "watch": [
       "src"
