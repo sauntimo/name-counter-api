@@ -8,6 +8,10 @@ export default class NameCounter {
 
   private readonly textFilePath = './inputs/oliver-twist.txt';
 
+  /**
+   * Takes a name and returns it titlecased and the count of occurrences in Oliver Twist 
+   * @param name name a name to search the text for
+   */
   public countName = async (name: string): Promise<INameCounter> => {
 
     const titleCasedName = name[0].toUpperCase() + name.substr(1).toLowerCase();

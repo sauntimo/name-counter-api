@@ -1,3 +1,7 @@
+
+/**
+ * Attatch event listener to button
+ */
 const attatchEventListener = () => {
   const btn = document.getElementById('makeRequest');
   btn.addEventListener('click', (e) => {
@@ -7,6 +11,10 @@ const attatchEventListener = () => {
   })
 }
 
+/**
+ * Takes a name and calls the API to get the count of that name in Oliver Twist
+ * @param {string} name a name to count occurrences of
+ */
 const getCount = async (name) => {
   const response = await fetch(`/name-counter/${name}`);
   const data = await response.json();
