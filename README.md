@@ -5,6 +5,8 @@ Simple node/typescript app providing an API for counting occurrences names in a 
 
 Implementing similar functionality to the command line version [github.com/sauntimo/name-counter](https://github.com/sauntimo/name-counter), this API takes a name and returns it, title-cased, with a count of how many times it occurs in the text of [Oliver Twist](https://en.wikipedia.org/wiki/Oliver_Twist). It is based heavily on [express-generator-typescript](https://www.npmjs.com/package/express-generator-typescript) and makes sparing changes. The text search is handled by the [streamsearch](https://www.npmjs.com/package/streamsearch) npm package which implements the [Boyer–Moore–Horspool algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore%E2%80%93Horspool_algorithm).
 
+Note that the matching is case sensitive so a search for "Oliver" will return 830 results and a search for "OLVIER" will return 51.
+
 ### Setup
 
 - clone the repo

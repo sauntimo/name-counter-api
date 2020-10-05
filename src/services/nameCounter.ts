@@ -14,8 +14,7 @@ export default class NameCounter {
    */
   public countName = async (name: string): Promise<INameCounter> => {
 
-    const titleCasedName = name[0].toUpperCase() + name.substr(1).toLowerCase();
-    let needle = Buffer.from(titleCasedName, 'utf8')
+    let needle = Buffer.from(name, 'utf8')
     let streamSearch = new StreamSearch(needle);
     const readStream = fs.createReadStream(this.textFilePath, 'utf8');
 
@@ -24,7 +23,7 @@ export default class NameCounter {
         streamSearch.push(chunk);
       }).on('end', () => {
         resolve({
-          name: titleCasedName,
+          name: name,
           count: streamSearch.matches,
         });
       });
