@@ -40,7 +40,7 @@ $ curl -s 'localhost:3000/name-counter/Oliver'| python -m json.tool
 
 - the app is deployed on heroku so you can call the API there
 ```
-$ curl -s 'https://name-counter-api.herokuapp.com/name-counter/oliver'| python -m json.tool
+$ curl -s 'https://name-counter-api.herokuapp.com/name-counter/Oliver'| python -m json.tool
 ```
 
 ![image](https://user-images.githubusercontent.com/2720466/94990955-a99fc780-0577-11eb-967a-4648052d624e.png)
