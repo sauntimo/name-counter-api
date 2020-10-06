@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 const StreamSearch = require('streamsearch');
 
 import { INameCounter } from '../entities/NameCounter';
@@ -9,13 +8,13 @@ export default class NameCounter {
   private readonly textFilePath = './inputs/oliver-twist.txt';
 
   /**
-   * Takes a name and returns it titlecased and the count of occurrences in Oliver Twist 
+   * Takes a name and returns it titlecased and the count of occurrences in Oliver Twist
    * @param name name a name to search the text for
    */
   public countName = async (name: string): Promise<INameCounter> => {
 
-    let needle = Buffer.from(name, 'utf8')
-    let streamSearch = new StreamSearch(needle);
+    const needle = Buffer.from(name, 'utf8')
+    const streamSearch = new StreamSearch(needle);
     const readStream = fs.createReadStream(this.textFilePath, 'utf8');
 
     return new Promise((resolve, reject) => {
@@ -23,7 +22,7 @@ export default class NameCounter {
         streamSearch.push(chunk);
       }).on('end', () => {
         resolve({
-          name: name,
+          name,
           count: streamSearch.matches,
         });
       });
