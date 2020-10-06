@@ -1,4 +1,5 @@
 import fs from 'fs';
+// eslint-disable-next-line
 const StreamSearch = require('streamsearch');
 
 import { INameCounter } from '../entities/NameCounter';
@@ -17,7 +18,7 @@ export default class NameCounter {
     const streamSearch = new StreamSearch(needle);
     const readStream = fs.createReadStream(this.textFilePath, 'utf8');
 
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       readStream.on('data', (chunk) => {
         streamSearch.push(chunk);
       }).on('end', () => {
