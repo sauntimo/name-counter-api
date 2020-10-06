@@ -1,5 +1,5 @@
 import { Request, Response, Router } from 'express';
-import { BAD_REQUEST, CREATED, OK } from 'http-status-codes';
+import { StatusCodes } from 'http-status-codes';
 
 import NameCounter from '../services/nameCounter';
 
@@ -13,7 +13,7 @@ const nameCounter = new NameCounter();
  */
 router.get('/:name', async (req: Request, res: Response) => {
     const nameCount = await nameCounter.countName(req.params.name);
-    return res.status(OK).json(nameCount);
+    return res.status(StatusCodes.OK).json(nameCount);
 });
 
 export default router;
